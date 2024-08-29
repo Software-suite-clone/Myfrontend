@@ -7,8 +7,8 @@ import Header from "../Navbar/Header";
 const Login = () => {
   return (
     <>
-    
       <Header/>
+      <h1>Anu</h1>
     <div className="login-container">
       <div className="login-content">
         <SocialLogin />
