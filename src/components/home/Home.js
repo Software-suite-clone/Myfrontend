@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Sidebar from "../Navbar/Sidebar";
-import "./Home.css";
-import Navbar from "../Navbar/Navbar";
 import Cards from "../Card/Cards";
 import ClassPage from "../classpage/ClassPage";
+import Navbar from "../Navbar/Navbar";
+import Sidebar from "../Navbar/Sidebar";
+import "./Home.css";
 
 function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -27,6 +27,8 @@ function Home() {
         ) : (
           <ClassPage />
         )}
+
+       
       </div>
     </>
   );
