@@ -1,0 +1,40 @@
+/* App.css */
+
+/* General styles */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.App-header {
+
+  
+
+  width: 100%;
+
+  
+}
+
+/* Make the width responsive based on screen size */
+@media only screen and (max-width: 1000px) {
+  .App-header {
+    padding: 15px;
+    max-width: 90%; /* Decrease max width for medium screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-header {
+    padding: 10px;
+    max-width: 100%; /* Full width for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .App-header {
+    padding: 5px;
+    max-width: 100%; /* Full width for mobile screens */
+  }
+}
