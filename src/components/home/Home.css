@@ -1,0 +1,143 @@
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 65px;
+  padding-top: 20px;
+  left: -200px;
+  height: 100%;
+  text-align: end;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  z-index: 999;
+ 
+  overflow-y: auto; /* Scrollable if content exceeds screen height */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+
+
+
+
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+ 
+  border-bottom: 1px solid gray;
+  z-index: 1000;
+  position: fixed;
+
+}
+
+.img-logo {
+ width: 5%;
+  height: 5%;
+  padding-left: 10px;
+  height: auto;
+}
+
+.navbar-brand {
+  padding-left: 10px;
+  flex-shrink: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5%;
+  gap: 10px;
+}
+
+.nav-item {
+  flex-shrink: 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.dropdown-menu.show {
+  top: 50px;
+  right: 0;
+  left: auto;
+}
+.navbar1{
+  position: fixed;
+}
+
+
+
+
+/* Center the modal */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Transparent background */
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.921); /* Slightly transparent white background */
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Optional: Adds a blur effect */
+
+  justify-items: center;
+  gap:10px
+}
+
+.modal-backdrop.show {
+  opacity: 0.5; /* Adjust the background transparency here */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+}
+
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .navbar-nav {
+    font-size: 18px;
+  }
+
+  .sidebar {
+    width: 200px;
+    left: -200px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .content.shifted {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .sidebar {
+    width: 180px;
+    left: -180px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .content.shifted {
+    margin-left: 180px;
+  }
+}

@@ -1,0 +1,42 @@
+.cards-container {
+  transition: transform 0.3s ease;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  overflow-y: auto;
+  
+  padding-left: 50px;
+  padding-top: 80px;
+  
+}
+
+.cards-container.shifted {
+  transition: transform 0.3s ease;
+  grid-template-columns: repeat(3, 1fr); /* Change to 3 columns when sidebar is open */
+ 
+  transform: translateX(200px);
+ 
+
+}
+
+.cardheader {
+  height: 100px;
+  background-image: url(../img/cardbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: azure;
+}
+
+.cardbody {
+  height: 100px;
+  
+}
+
+.btn1 {
+  margin-left: 90%;
+  padding: 0;
+  border: 0;
+  width: fit-content;
+  font-size: 24px;
+}

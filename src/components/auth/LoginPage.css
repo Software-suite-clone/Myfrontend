@@ -1,0 +1,60 @@
+/* LOGIN STYLLING */
+  /* index.css */
+  .auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    }
+    
+    h2 {
+    margin-top: 0;
+    }
+    
+    .form-group {
+    margin-bottom: 15px;
+    }
+    
+    label {
+    display: block;
+    font-weight: bold;
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    
+    button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+    background-color: #0056b3;
+    }
+    
+    @media only screen and (max-width: 600px) {
+    .auth-container {
+    padding: 10px;
+    }
+    
+    input[type="email"],
+    input[type="password"],
+    button {
+    padding: 8px;
+    }
+    }
+  

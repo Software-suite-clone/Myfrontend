@@ -1,0 +1,107 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+   
+  }
+  
+  .login-content {
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1.5);
+  }
+  
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+  }
+  .social-login img{
+    width: 50px;
+    height: 50px;
+  }
+  .social-login .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(55, 36, 221);
+  }
+  
+  
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+  }
+  
+  .or-text {
+    padding: 0 10px;
+    background: white;
+    color: #888;
+    font-weight: bold;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+  }
+  
+  .login-form h1 {
+    margin-bottom: 20px;
+  }
+  
+  .login-form .form-control {
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .login-button {
+    width: 90%;
+    padding: 5px;
+    margin: 1px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 2px ;
+    font-size: 14px;
+  }
+  
+  .register-forgot {
+    margin-top: 10px;
+    color: #007bff;
+    font-size: 14px;
+  }
+  
+  .register-forgot a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .register-forgot a:hover {
+    text-decoration: underline;
+  }
+  
