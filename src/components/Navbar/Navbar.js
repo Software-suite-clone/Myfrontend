@@ -102,7 +102,7 @@ const Navbar = ({ toggleSidebar }) => {
               </Link>
             </li>
             <li className="nav-item">
-            {isAuthenticated && <li><Link to="/" onClick={handleLogout}> <BsThreeDotsVertical /></Link></li>}
+            {isAuthenticated && <Link to="/" onClick={handleLogout}> <BsThreeDotsVertical /></Link>}
             </li>
           </ul>
         </div>

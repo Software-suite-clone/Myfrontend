@@ -27,6 +27,14 @@
   background-position: center;
   color: azure;
 }
+.cardheader2{
+  height: 100px;
+  background-image: url(../img/imgjoinclass.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: azure;
+}
 
 .cardbody {
   height: 100px;
