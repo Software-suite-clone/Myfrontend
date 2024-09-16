@@ -25,7 +25,7 @@ function Home() {
         {!showClassPage ? (
           <Cards isSidebarOpen={isSidebarOpenn} openClassPage={openClassPage} />
         ) : (
-          <ClassPage />
+          <ClassPage className="classpage" />
         )}
       </div>
     </>

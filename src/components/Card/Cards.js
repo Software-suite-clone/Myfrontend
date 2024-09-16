@@ -22,6 +22,7 @@ function Cards({ isSidebarOpen, openClassPage }) {
     };
     fetchCreateClass();
   }, []);
+
   const [joinclass, setJoinclass] = useState([]);
 
   useEffect(() => {
@@ -42,8 +43,26 @@ function Cards({ isSidebarOpen, openClassPage }) {
     fetchJoinClass();
   }, []);
 
-  const handleCardClick = () => {
-    openClassPage();
+  const handleCardClick = async (cardData) => {
+    try {
+      const response = await fetch("http://localhost:8080/allclass/postdto", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cardData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to post data");
+      }
+
+      const result = await response.json();
+      console.log("Data posted successfully:", result);
+      openClassPage(); // Navigate to the class page
+    } catch (error) {
+      console.log("Error posting data:", error);
+    }
   };
 
   return (
@@ -53,7 +72,7 @@ function Cards({ isSidebarOpen, openClassPage }) {
           className="Cards"
           style={{ width: "18rem" }}
           key={index}
-          onClick={handleCardClick}
+          onClick={() => handleCardClick(cc)} // Fix: Pass a function reference
         >
           <Card.Header className="cardheader">
             <Card.Title>{cc.classname}</Card.Title>
@@ -74,12 +93,12 @@ function Cards({ isSidebarOpen, openClassPage }) {
           className="Cards"
           style={{ width: "18rem" }}
           key={index}
-          onClick={handleCardClick}
+          onClick={() => handleCardClick(jc)} // Fix: Pass a function reference
         >
           <Card.Header className="cardheader2">
             <Card.Title>{jc.classname}</Card.Title>
             <Card.Subtitle>{jc.section}</Card.Subtitle>
-            <br/>
+            <br />
             <Card.Subtitle>{jc.name}</Card.Subtitle>
           </Card.Header>
           <Card.Body className="cardbody">

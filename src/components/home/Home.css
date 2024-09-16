@@ -11,6 +11,7 @@
   transition: all 0.3s ease;
   z-index: 999;
  
+  border-right: 1px solid gray;
   overflow-y: auto; /* Scrollable if content exceeds screen height */
 }
 
